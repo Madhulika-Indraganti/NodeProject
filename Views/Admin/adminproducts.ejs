@@ -1,0 +1,24 @@
+<%-include('../common/head.ejs') %>
+<%-include('../common/nav.ejs') %>
+
+<div class="container">
+    <div class="row ">
+    <% for(var pro of Product) {%>
+        <div class="card" style="width: 18rem;">
+            <img src="<%=pro.image%>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><%=pro.title%></h5>
+              <h5 class="card-title">Rs.<%=pro.price%></h5>
+              <p class="card-text"><%=pro.description%></p>
+              <form action="/" method="post">
+                <input type="hidden" value="<%=pro.id%>" name="productid">
+                <button type="submit" class="btn btn-success">Delete</button>
+              </form>
+            <a href="/" class="btn btn-warning">Edit</a>
+            </div>
+          </div>
+<% }%>
+
+</div>
+</div>
+<%-include('../common/end.ejs') %>

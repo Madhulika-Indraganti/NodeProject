@@ -1,0 +1,15 @@
+<%- include('./common/head.ejs') %>
+<%- include('./common/nav.ejs') %>
+<div class="container">
+    <div class="row ">
+    <% for(var pro of product) {%>
+        <div class="card" style="width: 18rem;">
+            <img src="<%=pro.image%>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><%=pro.title%></h5>
+              <h5 class="card-title">Rs.<%=pro.price%></h5>
+              <p class="card-text"><%=pro.description%></p>
+              <button type="submit" class="btn btn-success">Add to cart</button>
+    </div>
+</div>
+<%- include('./common/end.ejs') %>
